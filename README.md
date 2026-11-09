@@ -58,11 +58,13 @@ behaves differently, please [open an issue](https://github.com/esamyo/luxury-tv/
 
 ## Install
 
+**Step-by-step picture guide (Arabic): [docs/install.md](docs/install.md)**
+
 ### Option 1: on the TV with Downloader (no computer)
 
 1. On the TV, install **Downloader** by AFTVnews from the Google Play Store.
-2. Open it, type **`3190694`** in the address box and press Go. It downloads the latest Luxury TV; choose
-   **Install**. (Without the code: `https://github.com/esamyo/luxury-tv/releases/latest/download/luxurytv.apk`)
+2. Open it, type **`3190694`** (or `is.gd/luxurytv`) in the address box and press Go. It downloads the latest
+   Luxury TV; choose **Install**.
 3. Open **Luxury TV** from the apps list.
 
 Making it the Home screen and the screensaver needs a computer once: the last two commands under *Without the
