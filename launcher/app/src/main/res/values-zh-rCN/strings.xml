@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">无线网络</string>
+    <string name="settings">设置</string>
+    <string name="good_morning">早上好</string>
+    <string name="good_afternoon">下午好</string>
+    <string name="good_evening">晚上好</string>
+    <string name="good_night">晚安</string>
+    <string name="ethernet">有线网络</string>
+    <string name="offline">未连接网络</string>
+    <string name="not_available">此电视不支持该功能</string>
+    <string name="cant_open">无法打开 %1$s</string>
+    <string name="date_format">M月d日 EEEE</string>
+    <string name="date_format_home">M月d日 EEEE</string>
+    <string name="dream_name">时钟</string>
+    <string name="home_key_name">主页键</string>
+    <string name="home_key_description">让遥控器的主页键打开此桌面。</string>
+    <string name="reorder_not_saved">无法保存新顺序</string>
+
+    <string name="move_hint">移动</string>
+    <string name="move_hint_ok">按 OK 放置</string>
+</resources>

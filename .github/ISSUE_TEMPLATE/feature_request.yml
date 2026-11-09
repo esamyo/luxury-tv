@@ -1,0 +1,17 @@
+name: Feature request
+description: An idea for Luxury TV.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to do on your TV?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter to you?
+  - type: markdown
+    attributes:
+      value: Luxury TV stays light on purpose. New features should cost nothing for people who do not turn them on.

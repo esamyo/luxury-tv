@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Cài đặt</string>
+    <!-- Vietnamese greets the same way at any hour. -->
+    <string name="good_morning">Xin chào</string>
+    <string name="good_afternoon">Xin chào</string>
+    <string name="good_evening">Xin chào</string>
+    <string name="good_night">Xin chào</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Mất mạng</string>
+    <string name="not_available">TV này không hỗ trợ</string>
+    <string name="cant_open">Không mở được %1$s</string>
+    <!-- "Thứ Hai, 20 tháng 10" -->
+    <string name="date_format">EEEE, d MMMM</string>
+    <string name="dream_name">Đồng hồ</string>
+    <string name="home_key_name">Nút Home</string>
+    <string name="home_key_description">Cho nút Home trên remote mở launcher này.</string>
+    <string name="reorder_not_saved">Không lưu được thứ tự mới</string>
+    <string name="move_hint">Di chuyển</string>
+    <string name="move_hint_ok">OK để đặt</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Ayarlar</string>
+    <string name="good_morning">Günaydın</string>
+    <string name="good_afternoon">İyi Günler</string>
+    <string name="good_evening">İyi Akşamlar</string>
+    <string name="good_night">İyi Geceler</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Çevrimdışı</string>
+    <string name="not_available">Bu TV’de kullanılamıyor</string>
+    <string name="cant_open">%1$s açılamıyor</string>
+    <string name="date_format">d MMMM EEEE</string>
+    <string name="dream_name">Saat</string>
+    <string name="home_key_name">Ana ekran tuşu</string>
+    <string name="home_key_description">Uzaktan kumandanın ana ekran tuşunun bu başlatıcıyı açmasını sağlar.</string>
+    <string name="reorder_not_saved">Yeni sıra kaydedilemedi</string>
+    <string name="move_hint">Taşı</string>
+    <string name="move_hint_ok">Yerleştirmek için OK</string>
+</resources>

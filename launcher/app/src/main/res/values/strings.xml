@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Settings</string>
+    <string name="good_morning">Good morning</string>
+    <string name="good_afternoon">Good afternoon</string>
+    <string name="good_evening">Good evening</string>
+    <string name="good_forenoon">Good late morning</string>
+    <string name="good_night">Good night</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Offline</string>
+    <string name="not_available">Not available on this TV</string>
+    <string name="cant_open">Can\'t open %1$s</string>
+    <string name="date_format">EEEE  d MMMM</string>
+    <!-- Date next to the clock on Home; a locale can split it over two lines with \n. -->
+    <string name="date_format_home" translatable="false">@string/date_format</string>
+    <string name="dream_name">Clock</string>
+    <string name="home_key_name">Home button</string>
+    <string name="home_key_description">Makes the remote\'s Home button open this launcher.</string>
+    <string name="reorder_not_saved">Couldn\'t save the new order</string>
+
+    <!-- The hint in the middle of Home when holding OK picks an app up: a word between two arrows, then how to finish. -->
+    <string name="move_hint">Move</string>
+    <string name="move_hint_ok">OK to place</string>
+</resources>

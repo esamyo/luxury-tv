@@ -1,0 +1,89 @@
+# Luxury TV: the "luxury and light" list for the Xiaomi TV Box S 3rd gen (MiTV-AFMU0, twilight),
+# Google TV on Android 14. Tested on this box: Home, apps, screensaver, remote and phone remote all work.
+#
+# Everything here is DISABLED for user 0, never uninstalled. Undo any line with:
+#   adb shell pm enable --user 0 <package>
+# A few may vanish from the user after disabling (the system removes them); bring those back with:
+#   adb shell cmd package install-existing <package>   then   adb shell pm enable --user 0 <package>
+#
+# Apply:  tools\debloat.ps1 <ip> examples\xiaomi-mitv-afmu0\luxury.txt
+# Undo:   tools\debloat.ps1 <ip> examples\xiaomi-mitv-afmu0\luxury.txt -Undo
+#
+# Before you start:
+# - Install Luxury TV and make it Home first (tools\install.ps1).
+# - setupwraith: if Wi-Fi was saved during first setup, forget the network and join it again from Settings,
+#   or disabling setupwraith drops Wi-Fi and ADB. Re-enable setupwraith only to pair a new remote.
+# - Read every section and delete the lines you want to keep (the voice assistant, an app you watch, Play Store).
+# - Never add: com.google.android.gms, com.google.android.gsf, com.google.android.webview,
+#   com.google.android.tv.remote.service (phone remote), mitv.service, com.droidlogic*, your keyboard.
+
+# Setup and the stock home screens
+com.google.android.tungsten.setupwraith
+com.google.android.apps.tv.launcherx
+com.mitv.tvhome.atv
+com.xiaomi.android.tvsetup.partnercustomizer
+
+# Telemetry and feedback
+com.miui.tv.analytics
+com.xiaomi.statistic
+com.xiaomi.tvqs.overseas.y24
+com.google.android.feedback
+com.android.tv.feedbackconsent
+
+# Xiaomi channels, promos and auto-installs
+com.mitv.tvhome.michannel
+com.mitv.tvhome.mitvplus
+com.mitv.tvhome.oemtab
+com.xm.webcontent
+android.autoinstalls.config.soc.amlogic
+
+# Casting and sharing from the phone (Chromecast, Miracast, Mi Share)
+com.xiaomi.mitv.smartshare
+com.xiaomi.wfdsinkhelperservice
+com.xiaomi.mi_connect_service
+com.google.android.apps.mediashell
+
+# Voice assistant and text to speech (the remote's mic button stops working)
+com.google.android.katniss
+com.google.android.tts
+
+# Preloaded apps (keep the ones you use)
+com.google.android.youtube.tv
+com.google.android.youtube.tvmusic
+com.amazon.amazonvideo.livingroom
+com.netflix.ninja
+com.netflix.tokenmanager
+com.google.android.play.games
+com.google.android.marvin.talkback
+com.xiaomi.mimusic2
+com.xiaomi.mitv.mediaexplorer
+com.mitv.videoplayer
+com.mitv.gallery
+com.android.printspooler
+com.google.android.apps.tv.dreamx
+
+# Google extras (Play Store off: install and update apps from APK files)
+com.android.vending
+com.google.android.partnersetup
+com.google.android.syncadapters.calendar
+
+# System extras a TV does not use
+com.android.settings.intelligence
+com.android.healthconnect.controller
+com.android.dynsystem
+com.xiaomi.mitv.updateservice
+
+# Background services a TV box does not use (ads, personalization, backups, camera, legal notices)
+com.android.adservices.api
+com.android.ondevicepersonalization.services
+com.android.federatedcompute.services
+com.android.statementservice
+com.android.dreams.basic
+com.android.cameraextensions
+com.android.htmlviewer
+com.android.nearby.halfsheet
+com.android.hotspot2.osulogin
+com.android.wallpaperbackup
+com.android.sharedstoragebackup
+com.android.soundpicker
+com.xiaomo.tv.milegal

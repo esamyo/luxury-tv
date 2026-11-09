@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Nastavení</string>
+    <string name="good_morning">Dobré ráno</string>
+    <string name="good_afternoon">Dobré odpoledne</string>
+    <string name="good_evening">Dobrý večer</string>
+    <string name="good_night">Dobrou noc</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Bez připojení</string>
+    <string name="not_available">Na této televizi není k dispozici</string>
+    <string name="cant_open">Nelze otevřít: %1$s</string>
+    <string name="date_format">EEEE d. MMMM</string>
+    <string name="dream_name">Hodiny</string>
+    <string name="home_key_name">Tlačítko Domů</string>
+    <string name="home_key_description">Tlačítko Domů na ovladači otevře tuto domovskou obrazovku.</string>
+    <string name="reorder_not_saved">Nové pořadí se nepodařilo uložit</string>
+    <string name="move_hint">Přesunout</string>
+    <string name="move_hint_ok">OK pro umístění</string>
+</resources>

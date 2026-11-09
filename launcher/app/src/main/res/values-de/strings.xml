@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">WLAN</string>
+    <string name="settings">Einstellungen</string>
+    <string name="good_morning">Guten Morgen</string>
+    <string name="good_afternoon">Guten Tag</string>
+    <string name="good_evening">Guten Abend</string>
+    <string name="good_night">Gute Nacht</string>
+    <string name="ethernet">LAN</string>
+    <string name="offline">Offline</string>
+    <string name="not_available">Auf diesem TV nicht verfügbar</string>
+    <string name="cant_open">%1$s lässt sich nicht öffnen</string>
+    <string name="date_format">EEEE, d. MMMM</string>
+    <!-- Two lines next to the clock: the long German weekday and month names do not fit on one. -->
+    <string name="date_format_home">EEEE\nd. MMMM</string>
+    <string name="dream_name">Uhr</string>
+    <string name="reorder_not_saved">Neue Reihenfolge konnte nicht gespeichert werden</string>
+    <string name="move_hint">Verschieben</string>
+    <string name="move_hint_ok">OK zum Ablegen</string>
+    <string name="home_key_name">Home-Taste</string>
+    <string name="home_key_description">Lässt die Home-Taste der Fernbedienung diesen Launcher öffnen.</string>
+</resources>

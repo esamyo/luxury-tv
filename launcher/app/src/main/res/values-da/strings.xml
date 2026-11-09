@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Indstillinger</string>
+    <string name="good_morning">God morgen</string>
+    <string name="good_afternoon">God eftermiddag</string>
+    <string name="good_evening">God aften</string>
+    <string name="good_forenoon">God formiddag</string>
+    <string name="good_night">God nat</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Offline</string>
+    <string name="not_available">Ikke tilgængelig på dette TV</string>
+    <string name="cant_open">Kan ikke åbne %1$s</string>
+    <string name="date_format">EEEE d. MMMM</string>
+    <string name="dream_name">Ur</string>
+    <string name="home_key_name">Hjem-knap</string>
+    <string name="home_key_description">Får fjernbetjeningens Hjem-knap til at åbne denne launcher.</string>
+    <string name="move_hint">Flyt</string>
+    <string name="move_hint_ok">OK for at placere</string>
+    <string name="reorder_not_saved">Den nye rækkefølge kunne ikke gemmes</string>
+</resources>

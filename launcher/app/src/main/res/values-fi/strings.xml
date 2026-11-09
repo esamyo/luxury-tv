@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Asetukset</string>
+    <string name="good_morning">Hyvää huomenta</string>
+    <string name="good_afternoon">Hyvää päivää</string>
+    <string name="good_evening">Hyvää iltaa</string>
+    <string name="good_night">Hyvää yötä</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Ei yhteyttä</string>
+    <string name="not_available">Ei käytettävissä tässä televisiossa</string>
+    <string name="cant_open">Ei voitu avata: %1$s</string>
+    <!-- Finnish: "tiistaina 20. lokakuuta"; the weekday comes out in the essive form. -->
+    <string name="date_format">EEEE d. MMMM</string>
+    <string name="dream_name">Kello</string>
+    <string name="home_key_name">Koti-painike</string>
+    <string name="home_key_description">Kaukosäätimen Koti-painike avaa tämän käynnistimen.</string>
+    <string name="reorder_not_saved">Uutta järjestystä ei voitu tallentaa</string>
+    <string name="move_hint">Siirrä</string>
+    <string name="move_hint_ok">OK sijoittaa</string>
+</resources>

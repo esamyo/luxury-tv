@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Configurações</string>
+    <string name="good_morning">Bom dia</string>
+    <string name="good_afternoon">Boa tarde</string>
+    <string name="good_evening">Boa noite</string>
+    <string name="good_night">Boa noite</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Sem conexão</string>
+    <string name="not_available">Não disponível nesta TV</string>
+    <string name="cant_open">Não foi possível abrir %1$s</string>
+    <string name="date_format">EEEE  d \'de\' MMMM</string>
+    <string name="date_format_home">EEEE\nd \'de\' MMMM</string>
+    <string name="dream_name">Relógio</string>
+    <string name="home_key_name">Botão Home</string>
+    <string name="home_key_description">Faz o botão Home do controle abrir este launcher.</string>
+    <string name="reorder_not_saved">Não foi possível guardar a nova ordem</string>
+
+    <string name="move_hint">Mover</string>
+    <string name="move_hint_ok">OK para posicionar</string>
+</resources>

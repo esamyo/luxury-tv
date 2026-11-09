@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">ওয়াই-ফাই</string>
+    <string name="settings">সেটিংস</string>
+    <string name="good_morning">সুপ্রভাত</string>
+    <string name="good_afternoon">শুভ অপরাহ্ন</string>
+    <string name="good_evening">শুভ সন্ধ্যা</string>
+    <string name="good_night">শুভ রাত্রি</string>
+    <string name="ethernet">ইথারনেট</string>
+    <string name="offline">অফলাইন</string>
+    <string name="not_available">এই টিভিতে এভাইলেবল নেই</string>
+    <string name="cant_open">%1$s খোলা যাচ্ছে না</string>
+    <!-- "মঙ্গলবার, ২০ অক্টোবর"; Android writes the numbers in Bangla digits. -->
+    <string name="date_format">EEEE, d MMMM</string>
+    <string name="dream_name">ঘড়ি</string>
+    <string name="home_key_name">হোম বোতাম</string>
+    <string name="home_key_description">রিমোটের হোম বোতাম দিয়ে এই লঞ্চার খোলে।</string>
+    <string name="reorder_not_saved">নতুন ক্রম সেভ করা যায়নি</string>
+    <string name="move_hint">সরান</string>
+    <string name="move_hint_ok">বসাতে OK চাপুন</string>
+</resources>

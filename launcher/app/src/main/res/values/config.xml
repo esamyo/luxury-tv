@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Luxury TV settings. Edit this file, then run tools/install.ps1 (or tools/install.sh) to build and install.
+  Or push a theme instead: tools/theme.ps1 <tv> themes/<name> puts a config.json (the same keys) and a wallpaper.jpg
+  on the TV, and the launcher reads it at start.
+  Package names: adb shell pm list packages -3
+-->
+<resources>
+
+    <!-- Tried in order when no standard settings handler is usable; each package must also be visible
+         through <queries> in the manifest. -->
+    <string-array name="settings_fallback_components" translatable="false">
+        <item>com.xiaomi.mitv.settings/com.xiaomi.mitv.settings.entry.MainActivity</item>
+        <item>com.tcl.settings/com.tcl.settings.ui.MainActivity</item>
+        <item>com.amazon.tv.launcher/com.amazon.tv.launcher.ui.MainSettingsActivity</item>
+    </string-array>
+
+    <!-- Apps on the main row at the bottom, in this order. Missing apps are skipped; holding OK on an app moves it,
+         and the order you leave is kept. -->
+    <string-array name="dock_apps">
+        <item>com.netflix.ninja</item>
+        <item>com.amazon.amazonvideo.livingroom</item>
+        <item>com.google.android.youtube.tv</item>
+        <item>in.startv.hotstar</item>
+    </string-array>
+
+    <!-- Apps never shown on Home. -->
+    <string-array name="hidden_apps">
+        <item>com.mediatek.wwtv.tvcenter</item>
+        <item>com.mitv.gallery</item>
+    </string-array>
+
+    <!-- The language the launcher shows itself in, as a language tag ("vi", "pt-BR", "ar-EG-u-nu-latn"
+         for Arabic with Western digits), instead of the TV's. For firmware
+         that has no menu entry for the owner's language although the launcher is translated into it (a China-market
+         Xiaomi offers Chinese and English only). Empty, the default, follows the TV. A theme can set it ("locale"). -->
+    <string name="locale" translatable="false"></string>
+
+    <!-- The launcher's clocks (Home, the clock screensaver and the Clock screen) in 12- or 24-hour time whatever the TV
+         is set to: "12", "24", or "system", the default, which follows the TV. A theme can set "clock_format": "24". -->
+    <string name="clock_format" translatable="false">system</string>
+
+    <!-- Back on the Home screen opens the clock screensaver (ClockActivity). Back keeps working as usual inside apps and Settings; only Home's own Back
+         press changes. On by default; a theme can set "back_opens_clock": false. -->
+    <bool name="back_opens_clock">true</bool>
+
+    <!-- The clock screensaver's slow coloured glow behind the clock. false leaves the clock and date alone on plain black
+         (OLED panels); they still move. Can also be set with "clock_glow" in a theme. -->
+    <bool name="clock_glow">true</bool>
+
+    <!-- The clock screensaver as a metal clock on black: "gold" or "silver", with the greeting and temperature above
+         it, a thin line under it and a faint streak of light, all at one soft brightness. It moves every 3 minutes.
+         "glow" is the older coloured glow. No pictures and no video. Can also be set with "clock_style" in a theme. -->
+    <string name="clock_style" translatable="false">gold</string>
+
+    <!-- The style from sunset to sunrise (latitude and longitude below): silver at night with gold by day. Empty keeps
+         clock_style day and night. Can also be set with "clock_style_night" in a theme. -->
+    <string name="clock_style_night" translatable="false">silver</string>
+
+    <!-- Where the screensaver's greeting and temperature go: "beside_date" (on the date's line, before it),
+         "above_date" (under the clock's line, above the date) or "top" (above the clock). Can also be set with
+         "clock_greeting" in a theme. -->
+    <string name="clock_greeting" translatable="false">beside_date</string>
+
+    <!-- "auto" follows sunrise and sunset; "day" or "night" holds one look, e.g. to preview it.
+         Can also be set with "clock_time_of_day" in a theme. -->
+    <string name="clock_time_of_day" translatable="false">auto</string>
+
+    <!-- The weight of the clock's font when a theme pushes its own clock_font.ttf (a variable font), 100 to 900.
+         Can also be set with "clock_font_weight" in a theme. -->
+    <integer name="clock_font_weight">200</integer>
+
+    <!-- Where the TV is, in decimal degrees: the screensaver turns from gold to silver at that city's sunset
+         (computed on the TV, no network), and the temperature comes from the nearest airport. Empty: a fixed day,
+         sunrise 07:00 and sunset 18:30. Riyadh: 24.71 and 46.68. A theme can set "latitude" and "longitude". -->
+    <string name="latitude" translatable="false"></string>
+
+    <string name="longitude" translatable="false"></string>
+
+    <!-- The airport (ICAO code, e.g. OEMA) whose METAR gives the temperature after the greeting. Empty with
+         latitude and longitude set: the nearest airport reporting within about 100 km of them is used, so each city
+         gets its own. Open-Meteo at latitude and longitude is the fallback. All empty: no weather, no network use. A theme can set "weather_metar". -->
+    <string name="weather_metar" translatable="false"></string>
+
+    <!-- Wallpapers decode as RGB_565 (2 bytes a pixel, 4 MB at 1080p), which bands dark gradients,
+         most of all under a theme's wallpaper_dim. true decodes them in 32-bit colour: 8 MB, for TVs with 2 GB or more. -->
+    <bool name="wallpaper_true_color">false</bool>
+</resources>

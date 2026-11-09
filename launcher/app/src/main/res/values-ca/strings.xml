@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Configuració</string>
+    <string name="good_morning">Bon dia</string>
+    <string name="good_afternoon">Bona tarda</string>
+    <string name="good_evening">Bon vespre</string>
+    <string name="good_night">Bona nit</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Sense connexió</string>
+    <string name="not_available">No disponible en aquest televisor</string>
+    <string name="cant_open">No s\'ha pogut obrir %1$s</string>
+    <string name="dream_name">Rellotge</string>
+    <string name="reorder_not_saved">No s\'ha pogut desar el nou ordre</string>
+    <string name="home_key_name">Botó d\'inici</string>
+    <string name="home_key_description">Fa que el botó d\'inici del comandament obri aquest llançador.</string>
+    <string name="move_hint">Mou</string>
+    <string name="move_hint_ok">OK per col·locar</string>
+    <string name="date_format">EEEE d MMMM</string>
+</resources>

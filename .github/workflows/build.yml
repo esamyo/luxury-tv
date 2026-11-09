@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Build the APK
+        working-directory: launcher
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --console=plain
+
+      - name: Name the APK
+        run: |
+          version=$(grep -oP "versionName '\K[^']+" launcher/app/build.gradle)
+          mkdir -p out
+          cp launcher/app/build/outputs/apk/release/app-release.apk "out/luxurytv-$version.apk"
+          (cd out && sha256sum "luxurytv-$version.apk" > "luxurytv-$version.apk.sha256")
+          ls -l out
+          echo "::notice title=APK size::$(stat -c%s "out/luxurytv-$version.apk") bytes"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: luxurytv-apk-ci-build
+          path: out/*

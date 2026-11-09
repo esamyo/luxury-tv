@@ -1,0 +1,14 @@
+launcher/.gradle/
+launcher/build/
+launcher/app/build/
+launcher/local.properties
+.idea/
+*.iml
+*.apk
+*.aab
+*.jks
+*.keystore
+.DS_Store
+Thumbs.db
+# your own brand logos stay on your machine
+launcher/app/src/main/res/drawable-nodpi/logo_*.png

@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.esamyo.luxurytv'
+    compileSdk 34
+
+    defaultConfig {
+        // Opt-in identity for firmware that only accepts a Home app with a given package name:
+        // build with -PlauncherApplicationId=<that package>.
+        applicationId providers.gradleProperty('launcherApplicationId').getOrElse('com.esamyo.luxurytv')
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    signingConfigs {
+        // A release key from the environment (published releases); other builds use the debug key.
+        release {
+            def store = System.getenv('LUXURYTV_KEYSTORE')
+            if (store) {
+                storeFile file(store)
+                storePassword System.getenv('LUXURYTV_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('LUXURYTV_KEY_ALIAS')
+                keyPassword System.getenv('LUXURYTV_KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // R8 strips and optimises the code (AndroidX included): smaller APK, faster start on a slow TV CPU.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig System.getenv('LUXURYTV_KEYSTORE') ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    dependenciesInfo {
+        // The signed list of libraries Google Play reads. A sideloaded launcher has no use for it.
+        includeInApk false
+        includeInBundle false
+    }
+
+    packagingOptions {
+        resources {
+            // Kotlin metadata pulled in by AndroidX's dependencies. This launcher is plain Java and never reads it;
+            // leaving it out saves about 14 KB of every install.
+            excludes += ['kotlin/**', 'META-INF/*.version', 'META-INF/*.kotlin_module', 'DebugProbesKt.bin']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+}

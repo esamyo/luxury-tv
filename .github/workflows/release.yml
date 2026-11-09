@@ -1,0 +1,64 @@
+name: Release
+
+# Publishing a release on GitHub builds the signed APK and attaches it to that release. The download link
+# https://github.com/esamyo/luxury-tv/releases/latest/download/luxurytv.apk always points at the newest one,
+# so the Downloader code never has to change.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:   # a dry run: builds and checks the signature, publishes nothing
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      # The release certificate. A build signed with any other key fails here instead of being published.
+      CERT_SHA256: D2CC3F8D5A86575DE5998A4F04659DDDFAA0E3B9933E8B4759D7AB8681F90C50
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Build the signed APK
+        working-directory: launcher
+        env:
+          KEYSTORE_BASE64: ${{ secrets.LUXURYTV_KEYSTORE_BASE64 }}
+          LUXURYTV_KEYSTORE_PASSWORD: ${{ secrets.LUXURYTV_KEYSTORE_PASSWORD }}
+          LUXURYTV_KEY_PASSWORD: ${{ secrets.LUXURYTV_KEYSTORE_PASSWORD }}
+          LUXURYTV_KEY_ALIAS: luxurytv
+        run: |
+          test -n "$KEYSTORE_BASE64" || { echo "The release key is not set up in this repository."; exit 1; }
+          export LUXURYTV_KEYSTORE="$RUNNER_TEMP/release.jks"
+          echo "$KEYSTORE_BASE64" | base64 -d > "$LUXURYTV_KEYSTORE"
+          chmod +x gradlew
+          ./gradlew assembleRelease --console=plain
+          rm -f "$LUXURYTV_KEYSTORE"
+
+      - name: Check the signature
+        run: |
+          apk=launcher/app/build/outputs/apk/release/app-release.apk
+          apksigner=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
+          "$apksigner" verify --print-certs "$apk" | tee certs.txt
+          grep -qi "SHA-256 digest: $CERT_SHA256" certs.txt || { echo "Signed with the wrong key."; exit 1; }
+          echo "::notice title=Signed APK::$(stat -c%s "$apk") bytes, release certificate verified"
+
+      - name: Attach the APK to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          mkdir -p out
+          cp launcher/app/build/outputs/apk/release/app-release.apk out/luxurytv.apk
+          cp launcher/app/build/outputs/mapping/release/mapping.txt out/mapping.txt
+          (cd out && sha256sum luxurytv.apk > luxurytv.apk.sha256)
+          ls -l out
+          gh release upload "$TAG" out/luxurytv.apk out/luxurytv.apk.sha256 out/mapping.txt --clobber

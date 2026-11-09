@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Setelan</string>
+    <string name="good_morning">Selamat Pagi</string>
+    <string name="good_afternoon">Selamat Siang</string>
+    <string name="good_evening">Selamat Sore</string>
+    <string name="good_night">Selamat Malam</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Luring</string>
+    <string name="not_available">Tidak tersedia di TV ini</string>
+    <string name="cant_open">Tidak dapat membuka %1$s</string>
+    <string name="dream_name">Jam</string>
+    <string name="home_key_name">Tombol beranda</string>
+    <string name="home_key_description">Membuat tombol Beranda pada remote membuka antarmuka ini.</string>
+    <string name="reorder_not_saved">Tidak dapat menyimpan urutan baru</string>
+    <string name="move_hint">Pindahkan</string>
+    <string name="move_hint_ok">OK untuk menempatkan</string>
+    <string name="date_format">EEEE, d MMMM</string>
+</resources>

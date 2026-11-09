@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Innstillinger</string>
+    <string name="good_morning">God morgen</string>
+    <string name="good_afternoon">God ettermiddag</string>
+    <string name="good_evening">God kveld</string>
+    <string name="good_night">God natt</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Frakoblet</string>
+    <string name="not_available">Ikke tilgjengelig på denne TV-en</string>
+    <string name="cant_open">Kan ikke åpne %1$s</string>
+    <string name="date_format">EEEE d. MMMM</string>
+    <string name="dream_name">Klokke</string>
+    <string name="home_key_name">Hjem-knapp</string>
+    <string name="home_key_description">Lar Hjem-knappen på fjernkontrollen åpne denne startskjermen.</string>
+    <string name="reorder_not_saved">Kunne ikke lagre den nye rekkefølgen</string>
+    <string name="move_hint">Flytt</string>
+    <string name="move_hint_ok">OK for å plassere</string>
+</resources>

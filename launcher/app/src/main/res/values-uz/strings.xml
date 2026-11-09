@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi">Wi-Fi</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="good_morning">Xayrli tong</string>
+    <string name="good_afternoon">Xayrli kun</string>
+    <string name="good_evening">Xayrli kech</string>
+    <string name="good_night">Xayrli tun</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="offline">Internet yoʻq</string>
+    <string name="not_available">Bu televizorda mavjud emas</string>
+    <string name="cant_open">%1$s ochilmadi</string>
+    <string name="date_format">EEEE  d-MMMM</string>
+    <string name="dream_name">Soat</string>
+    <string name="home_key_name">Home tugmasi</string>
+    <string name="home_key_description">Pultdagi Home tugmasi shu launcherni ochadigan qiladi.</string>
+    <string name="reorder_not_saved">Yangi tartib saqlanmadi</string>
+    <string name="move_hint">Koʻchirish</string>
+    <string name="move_hint_ok">Joylash uchun OK</string>
+</resources>
